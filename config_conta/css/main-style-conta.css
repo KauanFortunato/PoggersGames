@@ -1,0 +1,157 @@
+/* BACKGROUND */
+
+
+.background{
+    /* background-color: rgba(31, 31, 31, 0.89); */
+    width: 100%;
+    height: auto;
+    padding-top: 130px;
+
+}
+
+/* IMG E NOME USUARIO */
+
+#img-user-bin-config{
+    border-radius: 50%;
+}
+
+.img-usuario-nome{
+    text-align: center;
+    min-width: 275px;
+}
+
+.img-usuario-nome img{
+    user-select: none;
+}
+
+.img-usuario-nome label{
+    margin: 0px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color .3s;
+}
+
+.img-usuario-nome span p{
+    font-family: var(--letra-pixel);
+    color: white;
+    font-size: 48px;
+    margin: 0px;
+}
+
+/* INPUT IMG */
+#icon-lapis{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 10%;
+}
+
+#icon-lapis h4{
+    margin: 0px;
+    font-size: 13px;
+    border-bottom: 1px solid transparent;
+    transition: border .3s;
+}
+
+#icon-lapis h4:hover{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+#icon-lapis svg{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#btn-troca-img{
+    display: none;
+}
+
+
+/* LOGOUT */
+
+
+.logout-user{
+    background-color: rgba(0, 0, 0, 0.89);
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    border-bottom: 1px solid var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 275px;
+}
+
+.logout-user a{
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color .3s;
+    text-decoration: underline;
+}
+
+.logout-user a:hover{
+    color: var(--color-text-light);
+}
+
+
+/* GRID INFORMATION */
+
+.grid-information{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(22, 22, 22, 0.89);
+    justify-content: center;
+    align-items: center;
+    min-width: 275px;
+    max-height: 98px;
+}
+
+.item-inf{
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0px;
+    border-bottom: solid 3px transparent;
+    transition: border .04s;
+}
+
+.item-inf:hover{
+    border-bottom: solid 8px green;
+}
+
+.item-inf a{
+    display: flex;
+    margin: 0px;
+    margin-top: 5px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.item-inf p{
+    margin: 0px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+/* OTIMIZAÇÃO MOBILE */
+
+@media only screen and (max-width: 754px) {
+    .grid-information{
+        justify-content: space-around;
+        font-size: small;
+    }
+
+    .item-inf p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}

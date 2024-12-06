@@ -1,0 +1,70 @@
+.body-perf{
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#item-3{
+    border-bottom: solid 8px green;
+}
+
+.grid-config{
+    display: grid;
+    grid-template-columns: 150px auto auto 150px;
+    margin-bottom: 30px;
+    min-width: 275px;
+
+}
+
+.grid-config h1{
+    grid-column: 2;
+    color: white;
+}
+
+.grid-config h2{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.grid-config span{
+    font-size: 22px;
+    font-weight: 1;
+}
+
+.grid-config hr{
+    border: 0;
+    margin-bottom: 30px;
+    border-top: 1px solid #494a4f;
+}
+
+.det-pessoal{
+    grid-column: 2;
+    background-color: rgba(22, 22, 22, 0.89);
+    color: white;
+}
+
+.det-pessoal > div{
+    margin-left: 20px;
+}
+
+.det-pessoal div:last-child{
+    margin-bottom: 20px;
+}
+
+
+/* OTIMIZAÇÃO */
+
+
+@media only screen and (max-width: 758px) {
+    .grid-config{
+        grid-template-columns: auto;
+    }
+
+    .grid-config h1{
+        grid-column: 1;
+    }
+    
+    .det-pessoal{
+        grid-column: 1;
+        width: 100%;
+    }
+}

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.para-voce, .lancamentos, .banner_promo, .best_promo, .promocoes{
+    margin: auto;
+    justify-content: center;
+    max-width: 1220px;
+}
+section{
+    padding-top: 50px;
+}
+
+/* BANNER PROMO */
+    .banner_promo{
+        display: flex;
+        padding: 10px;
+        min-height: 140px;
+        max-width: 1180px;
+        background-image: url(../../img_geral/banners_promo/banner-SS.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        border: 1px solid var(--color-primary-dark);
+        
+        transition: 0.2s;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .banner_promo:hover{
+        filter: brightness(110%);
+        cursor: pointer;
+        border: 1px solid orange;
+    }
+
+    .banner_promo .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        user-select: none;
+    }
+
+    .banner_promo .banner .title{
+        font-family: var(--letra-pixel);
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 900;
+        color: var(--color-text);
+    }
+
+    .banner_promo .banner .subtitle{
+        font-family: var(--letra-pixel);
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: 900;
+        color: var(--color-text);
+        text-align: center;
+        width: max-content;
+        padding-right: 7px;
+        padding-left: 7px;
+        background-color: rgb(234, 152, 0);
+        margin: auto;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .banner_promo .banner .title p,.banner_promo .banner .subtitle p{
+        margin: 0;
+    }
+
+section .titulo{
+    grid-row: 1;
+    font-family: var(--letra-pixel);
+    font-size: 25px;
+    padding-left: 10px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+section .titulo::before{
+    content: " ";
+    width: 5px;
+    background-color: var(--color-primary);
+    margin-right: 5px;
+}
+
+section .titulo h1{
+    margin: 0;
+}
+
+section .grid-container{
+    grid-row: 2;
+    display: grid;
+    gap: 10px;
+    max-width: 1300px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 0.1fr));
+}
+
+/* SECTION BEST PROMO */
+    .best_promo{
+        padding-top: 50px;
+    }
+
+    .best_promo .grid-container{
+        gap: 0;
+    }
+
+    .best_promo .grid-container .grid-item{
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .best_promo .grid-container .grid-item .compra-btn, .best_promo .grid-container .grid-item .desejo-btn{
+        border-radius: 0;
+    }
+
+    .best_promo .banner{
+        grid-column: 2/span 3;
+        background-image: url(../../img_geral/banners_promo/best_promo.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .best_promo .banner span{
+        color: var(--color-text);
+        text-transform: uppercase;
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .best_promo .banner span:last-child{
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+
+/* SECTION PROMOCAO */
+    .promocoes:nth-child(even) .grid-container{
+        /* grid-template-columns: 500px 350px 350px; */
+        margin-top: 20px;
+    }
+
+    .promocoes:nth-child(odd) .grid-container{
+        /* grid-template-columns: 350px 350px 500px; */
+        margin-top: 20px;
+    }
+
+    .promocoes:last-child{
+        margin-bottom: 50px;
+    }
+
+    .promocoes .grid-container .banner-1{
+        grid-column: 1;
+        background-image: url('../../img_geral/banners_promo/warner-bros-gamespng.png');
+        background-position: center;
+        grid-row: 1 / span 2;
+        border-radius: 10px;
+    }
+
+    .promocoes .grid-container .banner-2{
+        grid-column: 3;
+        background-image: url('../../img_geral/banners_promo/Bethesda.jpg');
+        background-position: center;
+        grid-row: 1 / span 2;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(85%);
+    }
+
+    .promocoes .grid-container .banner-3{
+        grid-column: 1;
+        background-image: url('../../img_geral/banners_promo/rockstar-games.jpg');
+        background-position: center;
+        grid-row: 1 / span 2;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+.text-grid-pesquisa{
+    padding-top: 20px;
+}
+
+/* OTIMIZAÇÃO MOBILE */
+
+@media only screen and (max-width: 822px){
+
+    section .grid-container{
+        display:block;
+    }
+
+    .best_promo .banner{
+        display: none;
+    }
+
+    .text-grid{
+        margin-left: 1%;
+    }
+
+    .compra-btn, .desejo-btn {
+        height: 7.5vw;
+    }
+
+    .erro-pesquisa {
+        grid-column: 1;
+        width: 99.8vw;
+    }
+
+    .text-grid-pesquisa {
+        padding-top: 30px;
+    }
+
+    .text-erro-pesquisa{
+        width: 100%;
+    }
+}

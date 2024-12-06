@@ -1,0 +1,118 @@
+#item-1{
+    border-bottom: solid 8px green;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    min-width: 275px;
+}
+
+.grid-container-compras{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(200px));
+    row-gap: 50px;
+    max-width: 1300px;
+    border-top: 1px solid rgb(122, 122, 122);
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.item-compra{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px;
+    /* padding-right: 10px; */
+    width: 100%;
+    transition: background .2s;
+}
+
+.item-compra:hover{
+    background-color: rgb(71, 71, 71);
+}
+
+.thumb-game{
+    display: flex;
+    align-items: center;
+}
+
+.img-game{
+    max-width: 150px;
+}
+
+.img-game img{
+    width: 100%;
+}
+
+.titulo-game{
+    margin-left: 10px;
+}
+
+.titulo-game a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.informacoes-compra{
+    display: flex;
+    align-items: center;
+}
+
+.ver-chave-item{
+    background-color: var(--color-text-heighlight);
+    padding: 4px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ver-chave-item:hover{
+    opacity: 0.8;
+}
+
+.ver-chave-item p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: auto;
+    font-weight: bold;
+    padding: 0;
+    padding-left: 5px;
+}
+
+/* OTIMIZAÇÃO */
+
+.ver-chave-item-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 422px){
+    .informacoes-compra{
+        display: none;
+    }
+
+    .ver-chave-item-mobile{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        grid-column: 1 / span 2;
+        text-transform: uppercase;
+        border-top: 1px solid rgb(122, 122, 122);
+    }
+
+    .ver-chave-item-mobile p{
+        font-size: 13px;
+        color: var(--color-text);
+        margin: 0;
+    }
+
+}

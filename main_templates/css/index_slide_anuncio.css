@@ -1,0 +1,193 @@
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input{
+    display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: .7s;
+}
+
+.img-box{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.img-box img{
+    width: 80%;
+    height: 100%;
+    max-width: 1100px;
+    cursor: pointer;
+    scale: 1;
+    transition: transform 0.2s;
+    
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+.nav-manual{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-manual .manual-btn{
+    border: 1px solid var(--color-primary);
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    background-color: var(--color-white);
+    transition: background .2s ease-in-out;
+}
+
+.nav-manual .manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: var(--color-primary);
+}
+
+.nav-manual .active-radio{
+    background-color: var(--color-primary);
+}
+
+
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .primeiro{
+    margin-left: -75%;
+}
+
+
+/* INFO CONTENT */
+
+
+.info-box{
+    background-color: var(--color-black);
+}
+
+.background-info{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text);
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    align-items: center;
+}
+
+.compra-anuncio{
+    display: flex;
+    align-items: center;
+}
+
+.btn-compra{
+    display: flex;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* CORES FUNDO BOX */
+
+.slide-box.primeiro{
+    background-color: #c4798d;
+}
+
+.slide-box.segundo{
+    background-color: #252a2f;
+}
+
+.slide-box.terceiro{
+    background-color: #ffd2a0;;
+}
+
+.slide-box.quarto{
+    background-color: #151e21;;
+}
+
+.img-box a{
+    width: 70%;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    max-width: 2080px;
+}
+
+.slide-box.primeiro .img-box a{
+    background-color: #22223c;
+}
+
+.slide-box.segundo .img-box a{
+    background-color: #737476;
+}
+
+.slide-box.terceiro .img-box a{
+    background-color: #d87800;
+}
+
+.slide-box.quarto .img-box a{
+    background-color: #e9c700;
+}
+
+/* OTIMNIZAÇÃO */
+
+@media only screen and (max-width: 819px){
+    
+    .slide-box.primeiro .img-box a{
+        background-color: transparent;
+    }
+
+    .slide-box.segundo .img-box a{
+        background-color: transparent;
+    }
+
+    .slide-box.terceiro .img-box a{
+        background-color: transparent;
+    }
+
+    .slide-box.quarto .img-box a{
+        background-color: transparent;
+    }
+
+    .nome-anuncio h1, .preco-anuncio, .btn-compra span{
+        font-size: 16px;
+    }
+
+    .img-box img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,284 @@
+/* GRID CONTAINER */
+
+.grid-container{
+    display: grid; 
+    grid-template-columns: 60% 35%;
+    column-gap: 5%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+/* GRID GAMES IN CART */
+
+.titulo-grid{
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    background-color: var(--color-destaque);
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+
+.titulo-grid p{
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+    font-weight: 700;
+}
+
+.carrinho-titulo, .compra-titulo{
+    grid-row: 1;
+    color: var(--color-text-light);
+    font-family: var(--letra-pixel);
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.carrinho-titulo p, .compra-titulo p{
+    margin-top: 10px;
+}
+
+.grid-cart-items{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 30px;
+    background-color: #373737;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: fit-content;
+}
+
+.grid-cart-items .cart-item:not(.grid-cart-items .cart-item:first-child){
+    padding-top: 30px;
+}
+
+.grid-cart-items .cart-item{
+    border-bottom: 1px solid rgb(102, 102, 102);
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-cart-items .cart-item:last-of-type{
+    border: 0px;
+    padding-bottom: 0;
+}
+
+.cart-item .item{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+}
+
+.cart-item .thumb-game img{
+    max-width: 190px;
+    border-radius: 5px;
+}
+
+.cart-item .titulo-game{
+    color: white;
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cart-item .titulo-game a{
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.cart-item .item .acoes{
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .item .acoes a{
+    text-decoration: none;
+    color: var(--color-text);
+    padding-left: 5px;
+    border-left: 2px solid var(--color-text);
+    transition: color 0.2s;
+}
+
+.cart-item .item .acoes a:first-child{
+    padding: 0;
+    padding-right: 5px;
+    border-left: 0px;
+}
+
+.cart-item .item .acoes a:hover{
+    color: white;
+}
+
+
+.cart-item .titulo-game p{
+    margin: 0px;
+    font-size: 18px;
+}
+
+.cart-item .preco-game p{
+    color: white;
+    text-align: right;
+    font-size: 22px;
+}
+/* ITEM COMPRA */
+
+
+.grid-compra{
+    grid-column: 2;
+    background-color: #373737;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 80%;
+    height: fit-content;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.grid-compra .linha{
+    display: flex;
+    color: var(--color-text);
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.grid-compra .linha:last-of-type{
+    display: flex;
+    color: var(--color-text-light);
+    font-size: 23px;
+    font-weight: 700;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.grid-compra .btn-finalizar{
+    background: linear-gradient(10deg,var(--color-text-heighlight),transparent) #26cc1a;
+    height: 50px;
+    border: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px;;
+    font-style: italic;
+    cursor: pointer;
+    transition: background .2s;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.grid-compra .btn-finalizar:hover{
+    background: linear-gradient(10deg,#26cc1a,transparent) var(--color-text-heighlight);
+}
+
+.codigo-desconto{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-compra .codigo-desconto{
+    padding-top: 30px;
+    border-top: 1px solid rgb(102, 102, 102);
+}
+
+.grid-compra .codigo-desconto span{
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-compra .codigo-desconto .input-desconto{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.grid-compra .codigo-desconto .input-desconto input{
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    width: 50%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: rgb(255, 255, 255);
+    border-right: var(--color-text-heighlight);
+    border-radius: 5px 0px 0px 5px;
+    text-transform: uppercase;
+}
+
+.grid-compra .codigo-desconto .input-desconto button{
+    border: none;
+    padding: 0;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    background-color: var(--color-text-heighlight);
+    border: 2px solid var(--color-text-heighlight);
+    height: 30px;
+    max-width: 73.4;
+    padding: 6px;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    box-shadow: 0px 0px 15px rgb(35, 35, 35);
+}
+
+/* NEHUM ITEM NO CARRINHO */
+
+.cart-item.erro-msg{
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-finalizar.sem-item button{
+    cursor:default;
+    filter: grayscale(100%);
+}
+
+.form-finalizar.sem-item button:hover{
+    background: linear-gradient(10deg,var(--color-text-heighlight),transparent) #26cc1a;
+}
+
+.sem-dinheiro{
+    position: fixed;
+    top: 20%;
+    right: 0%;
+    width: 200px;
+    background-color: rgba(252, 47, 47, 0.829);
+    padding: 10px;
+    z-index: 1002;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+    /* display: none; */
+}
+
+.sem-dinheiro p{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.sem-dinheiro.erro{
+    transform: translateX(-100%);
+}

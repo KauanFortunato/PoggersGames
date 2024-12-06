@@ -1,0 +1,163 @@
+#item-4{
+    border-bottom: solid 8px green;
+}
+
+/* ADD FUNDOS */
+
+.align-items{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.add-fundos{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 60% 25%;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.container-fundos{
+    grid-column: 1;
+    width: 100%;
+}
+
+.fundo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-secundaria);
+    font-size: larger;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.fundo-item p{
+    color: white;
+    margin-left: 10px;
+}
+
+.info-fundos{
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+    margin-right: 10px;
+}
+
+.info-fundos p{
+    background-color: black;
+    padding: 5px;
+    width: 65px;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.info-fundos .btn-fundos{
+    color: var(--color-text-light);
+    background-color: var(--color-text-heighlight);
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    user-select: none;
+
+}
+
+.info-fundos .btn-fundos svg{
+    display: none;
+}
+
+/* DETALHES CONTA */
+
+.detalhe-conta{
+    margin-left: 20px;
+    background-color: var(--color-cabecalho);
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.detalhe-conta h1{
+    font-family: var(--letra-pixel);
+    color: var(--color-text-heighlight);
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.saldo-conta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.saldo-conta p{
+    font-weight: 100;
+    color: var(--color-text-light);
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.saldo-conta h1{
+    font-family: var(--letra-normal);
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    color: var(--color-text-light);
+}
+
+p.id_carteira{
+    text-align: right;
+    margin-bottom: 0;
+    color: rgba(150, 150, 150, 0.578);
+    font-style: italic;
+    font-size: 13px;
+}
+
+
+/* OTIMIZAÇÃO */
+
+@media only screen and (max-width: 754px){
+    .add-fundos{
+        grid-template-columns: 60% auto;
+    }
+
+    .info-fundos .btn-fundos{
+        text-align: center;
+        padding: 0;
+        width: auto;
+    }
+
+    .info-fundos .btn-fundos svg{
+        display: block;
+    }
+
+    .info-fundos .btn-fundos span{
+        display: none;
+    }
+
+    .detalhe-conta{
+        margin-left: 5px;
+        height: 20%;
+    }
+
+    .detalhe-conta h1{
+        font-size: 17px;
+        text-align: center;
+
+    }
+
+    .saldo-conta{
+        display: block;
+        text-align: center;
+
+    }
+
+    .saldo-conta p{
+        font-size: 10px;
+    }
+
+    .saldo-conta h1{
+        font-size: 20px;
+    }
+}

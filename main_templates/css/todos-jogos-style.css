@@ -1,0 +1,264 @@
+.background-pag{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.background{
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    background-image: url('../../img_geral/background-todos-jogos-black.jpg');
+    background-size: cover;
+    background-position: 300px;
+    width: 100%;
+    height: 200px;
+}
+
+/* .background::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 290px;
+    
+} */
+
+.titulo-pag{
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    color: var(--color-white);
+    padding-top: 50px;
+}
+
+.titulo-pag h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* INFO PAG TODOS JOGOS */
+
+.info-todos-jogos{
+    background-color: var(--color-dark-3);
+    width: 100%;
+    text-align: center;
+    grid-column: 1 / span 2;
+}
+
+.info-todos-jogos p{
+    margin: auto;
+    padding: 30px;
+    font-size: 16px;
+    font-family: var(--letra-normal);
+    font-weight: 100;
+    width: 800px;
+    color: var(--color-grey-light);
+}
+
+
+/* GRID FILTRO E ITEMS */
+
+.grid-items-filtro{
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 2px;
+    justify-content: center;
+}
+
+/* GRID */
+
+.grid-container {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    padding: 1px;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    max-width: 1300px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* GRID ITEM */
+
+.grid-item{
+    padding: 0;
+}
+
+
+/* FILTRO GRID */
+
+.grid-container-filtro{
+    grid-column: 2;
+    width: 100%;
+    height: 60%;
+    background-color: var(--color-dark-1);
+    margin-top: 80px;
+}
+
+.filtro-item .txt-filtro p{
+    color: var(--color-grey-light);
+    text-transform: uppercase;
+    font-family: var(--letra-pixel);
+    font-size: 19px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.caixa-opcoes{
+    display: flex;
+    justify-content: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--color-grey-light);
+    flex-direction: column;
+}
+
+.caixa-opcoes .select-tipo{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.caixa-opcoes .select-tipo:hover{
+    background-color: rgba(255, 255, 255, 0.089);
+}
+
+.caixa-opcoes .select-tipo > label{
+    cursor: pointer;
+}
+
+.caixa-opcoes .select-tipo input{
+    display: none;
+}
+
+.caixa-opcoes .select-tipo p{
+    margin: 0;
+    margin-left: 5px;
+    color: var(--color-grey-light);
+    user-select: none;
+}
+
+.select-tipo .check-tipo-item{
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    border: 3px solid var(--color-grey-light);
+    background-color: transparent;
+}
+
+.select-tipo .check-tipo-item svg{
+    display: none;
+}
+
+#check-jogo:checked ~ .check-tipo-item,
+#check-gift-card:checked ~ .check-tipo-item{
+    border: 3px solid var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+#check-jogo:checked ~ .check-tipo-item svg,
+#check-gift-card:checked ~ .check-tipo-item svg{
+    display: block;
+}
+
+select#ordenar-por-select {
+    width: 96%;
+    padding: 4px;
+    text-align: left;
+    appearance: none;
+    border: 1px solid var(--color-white);
+    outline: none;
+    background-color: var(--color-dark-1);
+    color: var(--color-white);
+}
+
+/* OTIMIZAÇÃO */
+
+@media only screen and (max-width: 754px) {
+    main{
+        padding-top: 90px;
+    }
+
+    .background-pag{
+        grid-template-columns: 100vw;
+    }
+
+    .background{
+        width: 99vw;
+    }
+
+    .info-todos-jogos{
+        width: 99vw;
+    }
+
+    .info-todos-jogos p{
+        width: 100%;
+        font-size: 13px;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .titulo-pag h1{
+        font-size: 50px;
+    }
+
+    .grid-items-filtro{
+        grid-template-columns: auto;
+       justify-content: center;
+    }
+
+    .grid-container-filtro{
+        display: none;
+    }
+
+    .grid-container{
+        grid-column: 1;
+        grid-template-columns: 48.5vw 48.5vw;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .grid-item img{
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .compra-btn, .desejo-btn{
+        height: 6.3vh;
+    }
+
+    .information{
+        height: 20vw;
+        width: 100%;
+    }
+
+    .compra-desejo-btn{
+        width: 100%;
+    }
+
+    .price-item{
+        margin-right: 0;
+    }
+
+    .title-item{
+        margin-left: 0;
+    }
+}  
+
+
+

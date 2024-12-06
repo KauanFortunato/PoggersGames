@@ -1,0 +1,79 @@
+.infoProd{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.infoProd h3{
+    color: var(--color-primary);
+}
+
+.infoProd form{
+    margin-top: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    background-color: var(--color-dark-3);
+    padding: 0 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-input{
+    width: 60%;
+}
+
+.inputBox{
+    position: relative;
+    margin: 30px 0;
+    width: 80%;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    outline: none;
+    color: var(--color-white);
+    font-size: 15px;
+    width: 50%;
+    letter-spacing: 1px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+    top: 25px;
+    font-size: 12px;
+    color: rgb(0, 255, 0);
+}
+
+#lancamento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit{
+    background-image: linear-gradient(to right, rgb(4, 172, 4), rgb(2, 108, 2));
+    width: 10%;
+    height: 30%;
+    border: none;
+    padding: 15px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, rgb(0, 130, 0), rgb(1, 74, 1));
+}

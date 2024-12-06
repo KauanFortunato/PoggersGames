@@ -1,0 +1,191 @@
+#item-2{
+    border-bottom: solid 8px green;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    min-width: 275px;
+}
+
+.grid-container-lista-desejos{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(200px));
+    row-gap: 20px;
+    max-width: 1300px;
+    border-top: 1px solid rgb(122, 122, 122);
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.item-desejo{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    /* padding-right: 10px; */
+    width: 100%;
+    transition: background .2s;
+    min-width: 275px;
+}
+
+.item-desejo:hover{
+    background-color: rgb(71, 71, 71);
+}
+
+.thumb-game, .comprar-game{
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.img-game{
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.img-game img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.titulo-game{
+    margin-left: 10px;
+}
+
+.titulo-game a{
+    color: var(--color-text);
+    text-decoration: none;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.preco-game p{
+    color: var(--color-text-heighlight);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.compra-btn{
+    background-color: transparent;
+    border: 0px;
+    height: 2.3vw;
+    cursor: pointer;
+    transition: background .3s;
+    background-color: rgb(94, 92, 92);
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.compra-btn span{
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: normal;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.compra-btn svg{
+    display: none;
+}
+
+.lixeira{
+    margin-left: 10px;
+}
+
+.lixeira a path{
+    transition: stroke .2s;
+}
+
+.lixeira a:hover path{
+    stroke: rgb(222, 0, 0);
+}
+
+
+/* OTIMIZAÇÃO */
+
+.compra-btn-mobile{
+    display: none;
+}
+
+.nenhum-item{
+    background-color: var(--color-cabecalho);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nenhum-item p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--letra-pixel);
+    color: var(--color-text-light);
+    height: 100%;
+    margin: 0;
+}
+
+form.desejo-btn.form-jogo{
+    margin: 0;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 754px){
+    .compra-btn{
+        display: none;
+    }
+
+    .titulo-game{
+        padding: 1px;
+    }
+    
+    .btn-mobile{
+        grid-column: 1 / span 2;
+        width: 100%;
+    }
+
+    .preco-game {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        /* border-right: 1px solid grey; */
+    }
+
+    .compra-btn-mobile{
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: 0px;
+        cursor: pointer;
+        transition: opacity .3s;
+        background-color: var(--color-text-heighlight);
+        padding: 5px;
+    }
+
+    .compra-btn-mobile:hover{
+        opacity: 0.5;
+    }
+
+    .compra-btn-mobile span{
+        color: white;
+        text-transform: uppercase;
+        font-family: Arial,Helvetica,sans-serif;
+        letter-spacing: normal;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .lixeira {
+        margin-left: 10px;
+        padding-right: 10px;
+    }
+    
+}

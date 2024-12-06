@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+
+body{
+    background: hsla(0, 0%, 17%, 1);
+    background: linear-gradient(225deg, hsla(0, 0%, 17%, 1) 0%, hsla(234, 8%, 24%, 1) 85%);
+    background: -moz-linear-gradient(225deg, hsla(0, 0%, 17%, 1) 0%, hsla(234, 8%, 24%, 1) 85%);
+    background: -webkit-linear-gradient(225deg, hsla(0, 0%, 17%, 1) 0%, hsla(234, 8%, 24%, 1) 85%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2C2C2C", endColorstr="#383942", GradientType=1 );
+    font-family: 'Barlow', arial,sans-serif;
+}
+
+br{
+    user-select: none;
+}
+
+.box{
+    color: white;
+}
+
+legend{
+    text-align: center;
+}
+
+.logo{
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo a{
+    text-decoration: none;
+
+}
+
+.logo a h4{
+    top: 10px;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+    color: white;
+    position: absolute; /*Ocupa apenas o espço que esta sendo requisitado*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    height: auto;
+
+    min-width: 320px;
+    min-height: 350px;
+}
+
+fieldset{
+    border: 3px solid #ffffff;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .3s;
+} 
+
+.inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+    top: 25px;
+    font-size: 12px;
+    color: rgb(0, 255, 0);
+}
+
+#data-nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit{
+    background-image: linear-gradient(to right, rgb(4, 172, 4), rgb(2, 108, 2));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, rgb(0, 130, 0), rgb(1, 74, 1));
+}
+
+#login{
+    text-align: center;
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+#login:hover{
+    color: #ffffff;
+}
+
+#cadastro{
+    text-align: center;
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+#cadastro:hover{
+    color: #ffffff;
+}
+
+/* ERROS */
+/* CADASTRO */
+
+.nome-error, .email-error{
+    border-color: red;
+}
+
+.inputUser:focus ~ .error-nome-label, .inputUser:valid ~ .error-nome-label, 
+.inputUser:focus ~ .error-email-label, .inputUser:valid ~ .error-email-label{
+    color: white;
+}
+
+.labelError-nome, .labelError-email{
+    display: none;
+    color: red;
+    position: absolute;
+    top: 20px;
+    right: -5px;
+    font-size: 14px;
+}
+
+/* LOGIN */
+#erro-email-senha{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #A72F2E;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.icon-triangle{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    margin-right: 10px;
+}
